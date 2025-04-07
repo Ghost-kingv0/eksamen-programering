@@ -15,13 +15,13 @@ const questions =[{
     ID: 3,
     Question: 'images/opgave 3.jpg',
     answer: [11,10,13,8],
-    corretAnswer: 1
+    correctAnswer: 1
 },
 {
     ID: 4,
     Question: 'images/opgave 4.jpg',
     answer: [3,5,7,4],
-    corretAnswer: 3
+    correctAnswer: 3
 },
 {
     ID: 5,
