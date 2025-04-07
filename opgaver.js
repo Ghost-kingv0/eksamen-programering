@@ -101,4 +101,40 @@ const questions =[{
     Question: 'images/opgave 19.jpg',
     answer:[5,3,2,1],
     correctAnswer: 3
+},{
+    ID: 20,
+    Question: 'images/opgave 20.jpg',
+    answer:[5,3,4,6],
+    correctAnswer: 0
+},{
+    ID: 21,
+    Question: 'images/opgave 21.jpg',
+    answer:[5,3,4,4.5],   
+    correctAnswer: 2
+},{
+    ID: 22,
+    Question: 'images/opgave 22.jpg',
+    answer:[4,5,2,3],
+    correctAnswer: 1
+},{
+    ID: 23,
+    Question: 'images/opgave 23.jpg',
+    answer:[4,8,2,5],
+    correctAnswer: 0
+},{
+    ID: 24,
+    Question: 'images/opgave 24.jpg',
+    answer:[4,3,6,2.3],
+    correctAnswer: 3
+},
+{
+    ID: 25,
+    Question: 'images/opgave 25.jpg',
+    answer:[4,3.6,2,1],
+    correctAnswer: 1
+},{
+    ID: 26,
+    Question: 'images/opgave 26.jpg',
+    answer:[5,3,6,7],
+    correctAnswer: 0
 }]
