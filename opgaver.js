@@ -1,5 +1,5 @@
 //weeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-const questions =[{
+export const questions =[{
     ID: 1,
     Question:  'images/opgave 1.jpg',
     answer: [6,7,5,3],
