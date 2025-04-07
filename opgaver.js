@@ -1,5 +1,5 @@
 //weeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-export const questions =[{
+const questions =[{
     ID: 1,
     Question:  'images/opgave 1.jpg',
     answer: [6,7,5,3],
@@ -138,3 +138,6 @@ export const questions =[{
     answer:[5,3,6,7],
     correctAnswer: 0
 }]
+
+
+module.exports = { questions };

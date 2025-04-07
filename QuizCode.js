@@ -1,13 +1,21 @@
-import {questions} from "./opgaver"
-let b = ([questions])
+const { questions } = require('./opgaver.js');
+
+// Create a shallow copy of the questions array
+let b = [...questions];
 
 function shuffleMultipleTimes(array, times) {
+    let shuffledArray = [...array]; // Create a copy to avoid modifying the original array
     for (let i = 0; i < times; i++) {
-        array.sort(() => Math.random() - 0.5);
+        shuffledArray.sort(() => Math.random() - 0.5);
     }
-    return array;
+    return shuffledArray;
 }
 
-let a= shuffleMultipleTimes(b,20)
+// Shuffle the copied array 20 times
+let a = shuffleMultipleTimes(b, 20);
 
-console.log(a)
+
+console.log(a);
+console.log(a[0].answer[0]);
+
+
