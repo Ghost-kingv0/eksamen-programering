@@ -19,3 +19,4 @@ console.log(a);
 console.log(a[0].answer[0]);
 
 
+function keepingScore(){}
