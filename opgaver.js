@@ -94,50 +94,45 @@ const questions =[{
 },{
     ID: 18,
     Question: 'images/opgave 18.jpg',
-    answer: [4,3,1,2],
+    answer: [4,1,3,2],
     correctAnswer: 1
 },{
     ID: 19,
     Question: 'images/opgave 19.jpg',
-    answer:[5,3,2,1],
+    answer:[1,3,2,5],
     correctAnswer: 3
 },{
     ID: 20,
     Question: 'images/opgave 20.jpg',
-    answer:[5,3,4,6],
+    answer:[4,3,4,6],
     correctAnswer: 0
 },{
     ID: 21,
     Question: 'images/opgave 21.jpg',
-    answer:[5,3,4,4.5],   
-    correctAnswer: 2
+    answer:[3,5,4,4.5],   
+    correctAnswer: 1
 },{
     ID: 22,
     Question: 'images/opgave 22.jpg',
     answer:[4,5,2,3],
-    correctAnswer: 1
+    correctAnswer: 0
 },{
     ID: 23,
     Question: 'images/opgave 23.jpg',
-    answer:[4,8,2,5],
+    answer:[3.5,8,2,5],
     correctAnswer: 0
 },{
     ID: 24,
     Question: 'images/opgave 24.jpg',
-    answer:[4,3,6,2.3],
+    answer:[4,4.6,2.3,5],
     correctAnswer: 3
 },
 {
     ID: 25,
     Question: 'images/opgave 25.jpg',
-    answer:[4,3.6,2,1],
+    answer:[4,5,2,1],
     correctAnswer: 1
-},{
-    ID: 26,
-    Question: 'images/opgave 26.jpg',
-    answer:[5,3,6,7],
-    correctAnswer: 0
-}]
+},]
 
 
 module.exports = { questions };
