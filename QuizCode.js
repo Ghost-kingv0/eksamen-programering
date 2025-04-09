@@ -10,6 +10,6 @@ function shuffleMultipleTimes(times) {
     return shuffledArray;
 }
 
- Medule.exports = { shuffleMultipleTimes };
+ module.exports = { shuffleMultipleTimes };
  
 function keepingScore(){}
