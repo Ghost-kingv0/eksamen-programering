@@ -3,7 +3,7 @@ const { questions } = require('./opgaver.js');
 
 
 function shuffleMultipleTimes(times) {
-    let shuffledArray = [...questions]; // Create a copy to avoid modifying the original array
+    let shuffledArray = [...questions]; 
     for (let i = 0; i < times; i++) {
         shuffledArray.sort(() => Math.random() - 0.5);
     }
