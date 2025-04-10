@@ -1,4 +1,3 @@
-//weeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
 const questions =[{
     ID: 1,
     Question:  'images/opgave 1.jpg',

@@ -12,4 +12,3 @@ function shuffleMultipleTimes(times) {
 
  module.exports = { shuffleMultipleTimes };
  
-function keepingScore(){}
