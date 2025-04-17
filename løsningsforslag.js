@@ -65,7 +65,7 @@ løsningsforslag: "brug phytagoros til at regne hypotenusen af trekanten ved at 
     ID: 13,
     questions: 'images/opgave 13.jpg',
     facit: 3/4 ,
-    løsningsforslag: "    for at finde sandsynlighede af at trække en blå eller grøn kugle kan vi tage antallet af blå og grønne kugler og så dividere det med antallet af kugler i alt"
+    løsningsforslag: "for at finde sandsynlighede af at trække en blå eller grøn kugle kan vi tage antallet af blå og grønne kugler og så dividere det med antallet af kugler i alt"
 
 },{
     ID: 14,
