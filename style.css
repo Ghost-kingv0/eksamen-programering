@@ -85,3 +85,38 @@ body {
 .content li {
   margin-bottom: 0.5rem;
 }
+
+/* "bruger mig frem til at lave styling til sva""" */
+#quiz-container {
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+}
+#quiz-container img {
+  max-width: 100%;
+  height: auto;
+}
+.answers button {
+  display: block;
+  margin: 10px auto;
+  padding: 10px 20px;
+  font-size: 1em;
+}
+.correct {
+  background-color: green;
+  color: white;
+}
+.incorrect {
+  background-color: red;
+  color: white;
+}
+#next-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1em;
+}
+#scoreboard {
+  margin-top: 30px;
+  font-size: 1.2em;
+  font-weight: bold;
+}
