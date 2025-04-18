@@ -32,29 +32,27 @@
         <p>Målet er at hjælpe dig med at blive fortrolig med opgavetyperne og styrke dine færdigheder. Når du har løst alle opgaverne, vil din score automatisk blive vist.</p>
         <p>Løser du en opgave forkert eller kommer ikke frem til en løsning til en opgave, kan du i den næste side se løsningsforslag for dem.</p>
         <p>Hent en blyant og et hæfte – og kom i gang.</p>
+    </div>    
+        <!-- Quiz Container -->
+        <div id="quiz-container">
+          <!-- Billedet der viser spørgsmålet -->
+          <img src="./images/opgave 25.jpg">
+    
+          <!-- Svar-knapperne -->
+          <div id="answers">
+            <button id="svar1" class="answer-btn" onclick="handleAnswer(0)">Svar 1</button>
+            <button id="svar2" class="answer-btn" onclick="handleAnswer(1)">Svar 2</button>
+            <button id="svar3" class="answer-btn" onclick="handleAnswer(2)">Svar 3</button>
+            <button id="svar4" class="answer-btn" onclick="handleAnswer(3)">Svar 4</button>
+          </div>
+          
+          <!-- Næste-knap -->
+          <button id="next-button" onclick="nextQuestion()">Næste</button>
+        </div>
+        
+        <!-- Scoreboard -->
+        <div id="scoreboard"></div>
     </div>
-    
-    <!-- Quiz Container -->
-    <div id="quiz-container">
-      <!-- Billedet der viser spørgsmålet -->
-      <img id="Question" src="" alt="opgaver.js">
-      
-      <!-- Svar-knapperne -->
-      <div id="answers">
-        <button id="svar1" class="answer-btn">Svar 1</button>
-        <button id="svar2" class="answer-btn">Svar 2</button>
-        <button id="svar3" class="answer-btn">Svar 3</button>
-        <button id="svar4" class="answer-btn">Svar 4</button>
-      </div>
-      
-      <!-- Næste-knap -->
-      <button id="next-button">Næste</button>
-    </div>
-    
-    <!-- Scoreboard -->
-    <div id="scoreboard"></div>
-    
-</div>
 
 <!-- Rådgivning indhold -->
 <div class="content">
@@ -105,6 +103,9 @@
     }
 </script>
 
+<script src="QuizCode.js"></script>
+<script src="scriptcodeHTML.js"></script>
+<script src="opgaver.js"></script>
 </body>
 </html>
 

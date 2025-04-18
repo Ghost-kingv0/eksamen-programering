@@ -133,5 +133,4 @@ export const questions =[{
     correctAnswer: 1
 },]
 
-
-module.exports = { questions };
+import { questions } from  'QuizCode.js'; /// ikke sikre om  det quizcode den skal gøre det fra??
