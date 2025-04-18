@@ -4,7 +4,7 @@ import { solutions } from './løsningsforslag.js'
 let shuffelQuestions = shuffleMultipleTimes(20)
 let currectIndex = 0
 let wrongAnswers = [];
-// Brug evt. 20 shuffle "omgange" eller vælg et andet tal
+// Brug evt. 20 shuffle "omgange" eller vælg et andet tal .skal slettes
 
 
 
