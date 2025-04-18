@@ -133,5 +133,4 @@ const questions =[{
     correctAnswer: 1
 },]
 
-
 module.exports = { questions };
