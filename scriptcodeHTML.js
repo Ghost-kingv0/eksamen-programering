@@ -1,5 +1,5 @@
 import { shuffleMultipleTimes } from './QuizCode.js';
-import { questions } from './løsningsforslag.js';
+import { solutions } from './løsningsforslag.js';
 let wrongAnswers = [];
 // Brug evt. 20 shuffle "omgange" eller vælg et andet tal
 let shuffelQuestions = shuffleMultipleTimes(20);
@@ -101,17 +101,26 @@ function clearAnswerButtons() {
 
 export function showAllSolutions() {
     console.log('Viser løsninger...');
-    const rådgivningContent = document.querySelector('.content:nth-of-type(3) .visuel-subheading');
-    rådgivningContent.innerHTML = ''; // Ryd eksisterende indhold
+    const solutionsContainer = document.getElementById('solutions-container');
+    solutionsContainer.innerHTML = ''; // Ryd eksisterende indhold
 
-    questions.forEach(question => {
-        const questionElement = document.createElement('div');
-        questionElement.innerHTML = `
-            <h3>Opgave ${question.ID}</h3>
-            <img src="${question.questions}" alt="Opgave ${question.ID}">
-            <p><strong>Facit:</strong> ${question.facit}</p>
-            <p><strong>Løsningsforslag:</strong> ${question.løsningsforslag}</p>
+    solutions.forEach(solution => {
+        const solutionElement = document.createElement('div');
+        solutionElement.innerHTML = `
+            <h3>Opgave ${solution.ID}</h3>
+            <img src="${solution.questions}" alt="Opgave ${solution.ID}">
+            <p><strong>Facit:</strong> ${solution.facit}</p>
+            <p><strong>Løsningsforslag:</strong> ${solution.løsningsforslag}</p>
         `;
-        rådgivningContent.appendChild(questionElement);
+        solutionsContainer.appendChild(solutionElement);
     });
 }
+document.addEventListener('DOMContentLoaded', () => {
+    // Find "Rådgivning"-fanen (tredje fane)
+    const rådgivningTab = document.querySelector('.tab:nth-child(3)');
+
+    // Tilføj en event listener til at kalde showAllSolutions
+    rådgivningTab.addEventListener('click', () => {
+        showAllSolutions();
+    });
+});
