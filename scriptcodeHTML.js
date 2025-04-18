@@ -1,16 +1,12 @@
 import { shuffleMultipleTimes } from './QuizCode.js';
-<<<<<<< HEAD
+import { solutions } from './løsningsforslag.js'
 
-let wrongAnswers = []
 let shuffelQuestions = shuffleMultipleTimes(20)
 let currectIndex = 0
-=======
-import { solutions } from './løsningsforslag.js';
 let wrongAnswers = [];
 // Brug evt. 20 shuffle "omgange" eller vælg et andet tal
-let shuffelQuestions = shuffleMultipleTimes(20);
-let currentIndex = 0;
->>>>>>> dca0a7bfece6b18811af573c5604f05e926e6de4
+
+
 
  function showImage(){
     const quizimage = document.getElementById('Question')
@@ -45,16 +41,10 @@ showImage();
     }
  }
 
-    function WrongAnswers(){
-        if(checkAnswer(shuffelQuestions[currentIndex].correctAnswer)){
-        wrongAnswers.push(shuffelQuestions[currentIndex].ID)
-        }
-<<<<<<< HEAD
+ function WrongAnswers() {
+    if (!checkAnswer(shuffelQuestions[currentIndex].correctAnswer)) {
+        wrongAnswers.push(shuffelQuestions[currentIndex].ID);
     }
-=======
-        // Deaktiver alle knapper, så brugeren ikke kan svare flere gange
-        btn.disabled = true;
-    });
 }
 
 // Funktion til at rydde farverne og aktivere knapperne til næste spørgsmål
@@ -91,4 +81,3 @@ document.addEventListener('DOMContentLoaded', () => {
         showAllSolutions();
     });
 });
->>>>>>> dca0a7bfece6b18811af573c5604f05e926e6de4
