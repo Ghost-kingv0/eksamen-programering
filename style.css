@@ -30,6 +30,7 @@ body {
 
 /* Den aktive fane */
 .tab.active {
+<<<<<<< Updated upstream
   background: #004c99;    /* Mørk blå fane når den er valgt */
 }
 
@@ -119,4 +120,8 @@ body {
   margin-top: 30px;
   font-size: 1.2em;
   font-weight: bold;
+=======
+    background: #6a0707;
+    color: white;
+>>>>>>> Stashed changes
 }
