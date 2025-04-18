@@ -129,3 +129,4 @@ løsningsforslag: "brug phytagoros til at regne hypotenusen af trekanten ved at 
     løsningsforslag: " du kan her finde x ved at sige 0.5x+2.3=4.8, 0.5x+2.3-2.3=4.8-2.3, 0.5x=2.5, 2*0.5x=2.5*2, x=5"
 }, 
 ]
+export { questions };

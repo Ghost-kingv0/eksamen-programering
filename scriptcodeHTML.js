@@ -1,5 +1,5 @@
 import { shuffleMultipleTimes } from './QuizCode.js';
-
+import { questions } from './løsningsforslag.js';
 let wrongAnswers = [];
 // Brug evt. 20 shuffle "omgange" eller vælg et andet tal
 let shuffelQuestions = shuffleMultipleTimes(20);
@@ -96,5 +96,22 @@ function clearAnswerButtons() {
     btns.forEach(btn => {
         btn.classList.remove('correct', 'incorrect');
         btn.disabled = false;
+    });
+}
+
+export function showAllSolutions() {
+    console.log('Viser løsninger...');
+    const rådgivningContent = document.querySelector('.content:nth-of-type(3) .visuel-subheading');
+    rådgivningContent.innerHTML = ''; // Ryd eksisterende indhold
+
+    questions.forEach(question => {
+        const questionElement = document.createElement('div');
+        questionElement.innerHTML = `
+            <h3>Opgave ${question.ID}</h3>
+            <img src="${question.questions}" alt="Opgave ${question.ID}">
+            <p><strong>Facit:</strong> ${question.facit}</p>
+            <p><strong>Løsningsforslag:</strong> ${question.løsningsforslag}</p>
+        `;
+        rådgivningContent.appendChild(questionElement);
     });
 }
