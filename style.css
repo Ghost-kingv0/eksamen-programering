@@ -1,11 +1,122 @@
-.tab {
-    padding: 10px;
-    margin-right: 10px;
-    background: #bbb;
-    border-radius: 5px;
+/* Grundopsætning for hele siden */
+body {
+  font-family: Arial, sans-serif; /* Gør teksten letlæselig */
+  margin: 0;                      /* Fjerner standardafstand rundt om siden */
+  padding: 0;                     /* Fjerner indvendig afstand */
+  background-color: #f0f8ff;      /* Lys blå baggrund */
 }
 
+/* Øverste bjælke med faner */
+.tabs {
+  display: flex;          /* Lægger fanerne ved siden af hinanden */
+  background: #0077cc;    /* Mørkeblå baggrund */
+  padding: 10px;          /* Luft inde i bjælken */
+}
+
+/* Udseende for hver fane */
+.tab {
+  padding: 10px 20px;     /* Luft inde i fanen */
+  margin-right: 10px;     /* Afstand mellem fanerne */
+  background: #66aaff;    /* Lysere blå */
+  border-radius: 5px;     /* Runde hjørner */
+  color: white;           /* Hvid tekst */
+  cursor: pointer;        /* Gør musen til hånd ved hover */
+}
+
+/* Når musen holdes over en fane */
+.tab:hover {
+  background: #5599dd;    /* Mørkere blå ved hover */
+}
+
+/* Den aktive fane */
 .tab.active {
-    background: #666;
-    color: white;
+  background: #004c99;    /* Mørk blå fane når den er valgt */
+}
+
+/* Indholdet under fanerne */
+.content {
+  display: none;          /* Skjules som udgangspunkt */
+  padding: 20px;          /* Luft rundt om indholdet */
+  background: white;      /* Hvid baggrund */
+  border-top: none;       /* Ingen kant øverst */
+}
+
+/* Den aktive fanes indhold vises */
+.content.active {
+  display: block;         /* Vises når aktiv */
+}
+
+/* Overskrifterne */
+.visuel-heading {
+  font-size: 2.5em;       /* Stor tekst */
+  font-weight: bold;      /* Fed skrift */
+  color: #333;            /* Mørkegrå */
+  margin-bottom: 10px;    /* Luft under overskriften */
+  text-align: center;     /* Centreret tekst */
+}
+
+/* Underoverskrifterne */
+.visuel-subheading{
+  font-size: 1.2em;       /* Lidt større tekst end normalt */
+  color: #666;            /* Grå farve */
+  margin-bottom: 20px;    /* Luft under underteksten */
+  text-align: center;     /* Centreret tekst */
+}
+
+/* forsidebilledet */
+.forsidebillede {
+  width: 1000px;           /* Billedets bredde – kan fx også være 60% */
+  height: auto;           /* Holder proportionerne */
+  display: block;         /* Gør at margin 'auto' virker */
+  margin: 20px auto;      /* Centrerer billedet og giver luft over og under */
+  border-radius: 8px;     /* Blødt afrundede hjørner */
+}
+.content h2, .content h3 {
+  margin-top: 1.5rem;
+  font-weight: bold;
+  
+}
+
+.content ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.content li {
+  margin-bottom: 0.5rem;
+}
+
+/* "bruger mig frem til at lave styling til sva""" */
+#quiz-container {
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+}
+#quiz-container img {
+  max-width: 100%;
+  height: auto;
+}
+.answers button {
+  display: block;
+  margin: 10px auto;
+  padding: 10px 20px;
+  font-size: 1em;
+}
+.correct {
+  background-color: green;
+  color: white;
+}
+.incorrect {
+  background-color: red;
+  color: white;
+}
+#next-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1em;
+}
+#scoreboard {
+  margin-top: 30px;
+  font-size: 1.2em;
+  font-weight: bold;
 }

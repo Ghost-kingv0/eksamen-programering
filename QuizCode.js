@@ -1,14 +1,10 @@
-const { questions } = require('./opgaver.js');
+import { questions } from './opgaver.js';
 
-
-
-function shuffleMultipleTimes(times) {
-    let shuffledArray = [...questions]; 
+export function shuffleMultipleTimes(times) {
+    let shuffledArray = [...questions];
     for (let i = 0; i < times; i++) {
         shuffledArray.sort(() => Math.random() - 0.5);
     }
     return shuffledArray;
 }
-
- module.exports = { shuffleMultipleTimes };
  
