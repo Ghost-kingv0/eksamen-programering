@@ -1,4 +1,4 @@
-const questions =[{
+export const solutions =[{
 ID: 1,
 questions: 'images/opgave 1.jpg',
 facit: 5 ,

@@ -133,4 +133,8 @@ export const questions =[{
     correctAnswer: 1
 },]
 
+<<<<<<< HEAD
 import { questions } from  'QuizCode.js'; /// ikke sikre om  det quizcode den skal gøre det fra??
+=======
+
+>>>>>>> dca0a7bfece6b18811af573c5604f05e926e6de4

@@ -1,8 +1,16 @@
 import { shuffleMultipleTimes } from './QuizCode.js';
+<<<<<<< HEAD
 
 let wrongAnswers = []
 let shuffelQuestions = shuffleMultipleTimes(20)
 let currectIndex = 0
+=======
+import { solutions } from './løsningsforslag.js';
+let wrongAnswers = [];
+// Brug evt. 20 shuffle "omgange" eller vælg et andet tal
+let shuffelQuestions = shuffleMultipleTimes(20);
+let currentIndex = 0;
+>>>>>>> dca0a7bfece6b18811af573c5604f05e926e6de4
 
  function showImage(){
     const quizimage = document.getElementById('Question')
@@ -41,4 +49,46 @@ showImage();
         if(checkAnswer(shuffelQuestions[currentIndex].correctAnswer)){
         wrongAnswers.push(shuffelQuestions[currentIndex].ID)
         }
+<<<<<<< HEAD
     }
+=======
+        // Deaktiver alle knapper, så brugeren ikke kan svare flere gange
+        btn.disabled = true;
+    });
+}
+
+// Funktion til at rydde farverne og aktivere knapperne til næste spørgsmål
+function clearAnswerButtons() {
+    const btns = document.querySelectorAll('.answer-btn');
+    btns.forEach(btn => {
+        btn.classList.remove('correct', 'incorrect');
+        btn.disabled = false;
+    });
+}
+
+export function showAllSolutions() {
+    console.log('Viser løsninger...');
+    const solutionsContainer = document.getElementById('solutions-container');
+    solutionsContainer.innerHTML = ''; // Ryd eksisterende indhold
+
+    solutions.forEach(solution => {
+        const solutionElement = document.createElement('div');
+        solutionElement.innerHTML = `
+            <h3>Opgave ${solution.ID}</h3>
+            <img src="${solution.questions}" alt="Opgave ${solution.ID}">
+            <p><strong>Facit:</strong> ${solution.facit}</p>
+            <p><strong>Løsningsforslag:</strong> ${solution.løsningsforslag}</p>
+        `;
+        solutionsContainer.appendChild(solutionElement);
+    });
+}
+document.addEventListener('DOMContentLoaded', () => {
+    // Find "Rådgivning"-fanen (tredje fane)
+    const rådgivningTab = document.querySelector('.tab:nth-child(3)');
+
+    // Tilføj en event listener til at kalde showAllSolutions
+    rådgivningTab.addEventListener('click', () => {
+        showAllSolutions();
+    });
+});
+>>>>>>> dca0a7bfece6b18811af573c5604f05e926e6de4
