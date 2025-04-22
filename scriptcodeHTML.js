@@ -72,6 +72,7 @@ function handleAnswer(answerIndex) {
     }
     nextQuestion();
 }
+window.handleAnswer = handleAnswer;
 // Funktion til at rydde farverne og aktivere knapperne til næste spørgsmål
 function clearAnswerButtons() {
     const btns = document.querySelectorAll('.answer-btn');
