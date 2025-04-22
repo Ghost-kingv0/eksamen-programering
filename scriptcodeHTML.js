@@ -23,8 +23,21 @@ function showImage() {
         return;
     }
 
-    quizimage.src = shuffelQuestions[currentIndex].Question; // Sørg for, at 'Question' er korrekt stavet
-    
+    // Opdater billedet
+    quizimage.src = shuffelQuestions[currentIndex].Question;
+
+    // Opdater svarmulighederne på knapperne
+    const answers = shuffelQuestions[currentIndex].answer; // Hent svarmulighederne
+    const buttons = document.querySelectorAll('.answer-btn'); // Find alle svar-knapper
+
+    buttons.forEach((button, index) => {
+        if (answers[index] !== undefined) {
+            button.textContent = answers[index]; // Sæt teksten på knappen til svarmuligheden
+            button.style.display = 'inline-block'; // Sørg for, at knappen vises
+        } else {
+            button.style.display = 'none'; // Skjul knappen, hvis der ikke er en svarmulighed
+        }
+    });
 }
  function nextQuestion() {
     currentIndex++;
