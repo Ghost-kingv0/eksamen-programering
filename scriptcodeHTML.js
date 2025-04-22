@@ -24,6 +24,13 @@ function showImage() {
     }
 
     quizimage.src = shuffelQuestions[currentIndex].Question; // Sørg for, at 'Question' er korrekt stavet
+    
+    const answers = shuffelQuestions[currentIndex].answers; // Antag, at svarmulighederne er gemt i en 'answers'-array
+    const answerButtons = document.querySelectorAll('.answer-btn');
+
+    answerButtons.forEach((button, index) => {
+        button.textContent = answers[index]; // Opdater teksten på knappen
+    });
 }
  function nextQuestion() {
     currentIndex++;
