@@ -1,33 +1,51 @@
 import { shuffleMultipleTimes } from './QuizCode.js';
-import { solutions } from './løsningsforslag.js'
+import { solutions } from './løsningsforslag.js';
 
-let shuffelQuestions = shuffleMultipleTimes(20)
-let currectIndex = 0
+let shuffelQuestions = shuffleMultipleTimes(20);
+let currentIndex = 0;
 let wrongAnswers = [];
 // Brug evt. 20 shuffle "omgange" eller vælg et andet tal .skal slettes
 
 
 
- function showImage(){
-    const quizimage = document.getElementById('Question')
-    quizimage.src = shuffelQuestions[currentIndex].Question
- }
- function nextQuestion(){
-    currentIndex++
-    if(currentIndex >= shuffelQuestions.length){
-        currentIndex = 0
+function showImage() {
+    console.log(shuffelQuestions); // Debugging: Tjek, om data er korrekt
+    console.log(currentIndex); // Debugging: Tjek, om currentIndex er korrekt
+
+    const quizimage = document.getElementById('Question');
+    if (!quizimage) {
+        console.error('Elementet med id="Question" blev ikke fundet.');
+        return;
     }
+
+    if (!shuffelQuestions[currentIndex]) {
+        console.error('Spørgsmålet findes ikke i shuffelQuestions.');
+        return;
+    }
+
+    quizimage.src = shuffelQuestions[currentIndex].Question; // Sørg for, at 'Question' er korrekt stavet
+}
+ function nextQuestion() {
+    currentIndex++;
+    if (currentIndex >= shuffelQuestions.length) {
+        alert("Du har gennemført quizzen!");
+        return; // Stopper funktionen
+    }
+    showImage();
+}
+window.nextQuestion = nextQuestion;
 showImage();
 
             //husk at fixe så den ikke bliver ved med at loope 
- }
-
- function checkAnswer(answer){
-
-    const correctAnswer = shuffelQuestions[currentIndex].correctAnswer
-    const result = answer === correctAnswer
-    return result
- }
+ 
+            function checkAnswer(answer) {
+                if (!shuffelQuestions[currentIndex]) {
+                    console.error('Spørgsmålet findes ikke!');
+                    return false;
+                }
+                const correctAnswer = shuffelQuestions[currentIndex].correctAnswer;
+                return answer === correctAnswer;
+            }
 
  function score(){
    let score = 0 
@@ -36,7 +54,7 @@ showImage();
         score++
     }
 
-    if(currectIndex === totalQuestions - 1){
+    if(currentIndex === totalQuestions - 1){
         alert(`Your score is ${score} out of ${totalQuestions}`)
     }
  }
@@ -46,7 +64,14 @@ showImage();
         wrongAnswers.push(shuffelQuestions[currentIndex].ID);
     }
 }
-
+function handleAnswer(answerIndex) {
+    if (checkAnswer(answerIndex)) {
+        alert('Korrekt svar!');
+    } else {
+        alert('Forkert svar!');
+    }
+    nextQuestion();
+}
 // Funktion til at rydde farverne og aktivere knapperne til næste spørgsmål
 function clearAnswerButtons() {
     const btns = document.querySelectorAll('.answer-btn');
