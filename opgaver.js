@@ -73,7 +73,7 @@ export const questions =[{
 },{
     ID:14,
     Question: 'images/opgave 14.jpg',
-    answer:[0.08,0.16,0.40,0.32],
+    answer:[0.04,0.16,0.40,0.32],
     correctAnswer: 0
 },{
     ID:15,
@@ -103,7 +103,7 @@ export const questions =[{
 },{
     ID: 20,
     Question: 'images/opgave 20.jpg',
-    answer:[4,3,4,6],
+    answer:[4,3,5,6],
     correctAnswer: 0
 },{
     ID: 21,

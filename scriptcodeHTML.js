@@ -39,10 +39,11 @@ function showImage() {
         }
     });
 }
- function nextQuestion() {
+function nextQuestion() {
     currentIndex++;
     if (currentIndex >= shuffelQuestions.length) {
-        alert("Du har gennemført quizzen!");
+        console.log('Quizzen er færdig');
+        score(); // Vis scoren, når quizzen er færdig
         return; // Stopper funktionen
     }
     showImage();
@@ -58,29 +59,25 @@ showImage();
                     return false;
                 }
                 const correctAnswer = shuffelQuestions[currentIndex].correctAnswer;
+                console.log('Brugerens svar:', answer, 'Korrekt svar:', correctAnswer); // Debugging
                 return answer === correctAnswer;
             }
 
             function score() {
-                let score = 0;
-                let totalQuestions = shuffelQuestions.length;
+                console.log('score() blev kaldt'); // Debugging
+                console.log('Korrekte svar:', correctAnswersCount); // Debugging
+                console.log('Antal spørgsmål:', shuffelQuestions.length); // Debugging
+                const totalQuestions = shuffelQuestions.length;
             
-                // Beregn scoren
-                if (checkAnswer(shuffelQuestions[currentIndex].correctAnswer)) {
-                    score++;
-                }
+                // Find scoreboard-elementerne
+                const scoreboard = document.getElementById('scoreboard');
+                const scoreText = document.getElementById('score-text');
             
-                // Hvis det er det sidste spørgsmål, vis scoren
-                if (currentIndex === totalQuestions - 1) {
-                    const scoreboard = document.getElementById('scoreboard');
-                    const scoreText = document.getElementById('score-text');
+                // Opdater teksten med scoren
+                scoreText.textContent = `Du fik ${correctAnswersCount} ud af ${totalQuestions} rigtige!`;
             
-                    // Opdater teksten med scoren
-                    scoreText.textContent = `Du fik ${score} ud af ${totalQuestions} rigtige!`;
-            
-                    // Vis score-sektionen
-                    scoreboard.style.display = 'block';
-                }
+                // Vis score-sektionen
+                scoreboard.style.display = 'block';
             }
  function WrongAnswers() {
     if (!checkAnswer(shuffelQuestions[currentIndex].correctAnswer)) {
@@ -90,6 +87,8 @@ showImage();
 function handleAnswer(answerIndex) {
     if (checkAnswer(answerIndex)) {
         alert('Korrekt svar!');
+        correctAnswersCount++; // Øg tælleren for korrekte svar
+        console.log('Korrekte svar:', correctAnswersCount); // Debugging
     } else {
         alert('Forkert svar!');
     }
