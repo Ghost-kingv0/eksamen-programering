@@ -42,14 +42,20 @@ function showImage() {
  function nextQuestion() {
     currentIndex++;
     if (currentIndex >= shuffelQuestions.length) {
-        alert("Du har gennemført quizzen!");
+        showEndScreen(); // Vis slutskærmen, når alle spørgsmål er besvaret
         return; // Stopper funktionen
     }
     showImage();
 }
 window.nextQuestion = nextQuestion;
 showImage();
+function showEndScreen() {
+    const totalQuestions = shuffelQuestions.length;
+    const correctAnswersCount = totalQuestions - wrongAnswers.length;
 
+    // Vis resultatet som en alert
+    alert(`Quizzen er færdig! Du fik ${correctAnswersCount} rigtige og lavede ${wrongAnswers.length} fejl ud af ${totalQuestions} spørgsmål.`);
+}
             //husk at fixe så den ikke bliver ved med at loope 
  
             function checkAnswer(answer) {
@@ -58,7 +64,7 @@ showImage();
                     return false;
                 }
                 const correctAnswer = shuffelQuestions[currentIndex].correctAnswer;
-                return answer === correctAnswer;
+                return answer === correctAnswer; // Sammenlign brugerens svar med det korrekte svar
             }
 
             function score() {
@@ -88,12 +94,18 @@ showImage();
     }
 }
 function handleAnswer(answerIndex) {
+    if (answerIndex === undefined || answerIndex === null) {
+        alert('Vælg et svar, før du går videre!');
+        return; // Stop funktionen, hvis der ikke er valgt et svar
+    }
+
     if (checkAnswer(answerIndex)) {
         alert('Korrekt svar!');
     } else {
         alert('Forkert svar!');
+        wrongAnswers.push(shuffelQuestions[currentIndex].ID); // Registrer spørgsmålets ID som forkert
     }
-    nextQuestion();
+    nextQuestion(); // Gå til næste spørgsmål
 }
 window.handleAnswer = handleAnswer;
 // Funktion til at rydde farverne og aktivere knapperne til næste spørgsmål
