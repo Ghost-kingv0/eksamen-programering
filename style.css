@@ -30,7 +30,6 @@ body {
 
 /* Den aktive fane */
 .tab.active {
-<<<<<<< Updated upstream
   background: #004c99;    /* Mørk blå fane når den er valgt */
 }
 
@@ -66,7 +65,7 @@ body {
 
 /* forsidebilledet */
 .forsidebillede {
-  width: 1000px;           /* Billedets bredde – kan fx også være 60% */
+  width: 1000px;           /* Billedets bredde */
   height: auto;           /* Holder proportionerne */
   display: block;         /* Gør at margin 'auto' virker */
   margin: 20px auto;      /* Centrerer billedet og giver luft over og under */
@@ -120,8 +119,4 @@ body {
   margin-top: 30px;
   font-size: 1.2em;
   font-weight: bold;
-=======
-    background: #6a0707;
-    color: white;
->>>>>>> Stashed changes
 }
