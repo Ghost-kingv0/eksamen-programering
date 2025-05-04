@@ -54,7 +54,7 @@ function showEndScreen() {
     const correctAnswersCount = totalQuestions - wrongAnswers.length;
 
     // Vis resultatet som en alert
-    alert(`Quizzen er færdig! Du fik ${correctAnswersCount} rigtige og lavede ${wrongAnswers.length} fejl ud af ${totalQuestions} spørgsmål.`);
+    alert(`Quizzen er færdig! Du fik ${correctAnswersCount} rigtige ud af ${totalQuestions} spørgsmål.`);
 }
             //husk at fixe så den ikke bliver ved med at loope 
  
@@ -67,6 +67,7 @@ function showEndScreen() {
                 return answer === correctAnswer; // Sammenlign brugerens svar med det korrekte svar
             }
 
+        
             function score() {
                 let score = 0;
                 let totalQuestions = shuffelQuestions.length;
@@ -107,6 +108,7 @@ function handleAnswer(answerIndex) {
     }
     nextQuestion(); // Gå til næste spørgsmål
 }
+
 window.handleAnswer = handleAnswer;
 // Funktion til at rydde farverne og aktivere knapperne til næste spørgsmål
 function clearAnswerButtons() {
