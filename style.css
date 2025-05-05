@@ -114,7 +114,8 @@ body {
   
 
 }
-
-#next-button:hover {
-  background-color: #666666;   /* Endnu mørkere grå ved hover */
+#scoreboard {
+  margin-top: 30px;
+  font-size: 1.2em;
+  font-weight: bold;
 }
