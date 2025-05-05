@@ -85,3 +85,36 @@ body {
 .content li {
   margin-bottom: 0.5rem;
 }
+/* Svar-knapperne */
+.answer-btn {
+  font-size: 14px;              /* Lidt mindre tekst */
+  padding: 10px 20px;          /* Mindre luft i knappen */
+  margin: 8px;                 /* Lidt luft mellem knapper */
+  border: none;
+  border-radius: 6px;
+  background-color: #cccccc;   /* Neutral grå farve */
+  color: #333;                 /* Mørk grå tekst */
+
+ 
+}
+
+.answer-btn:hover {
+  background-color: #bbbbbb;   /* Lidt mørkere grå ved hover */
+}
+
+/* Næste-knappen */
+#next-button {
+  font-size: 14px;              /* Mindre tekst */
+  padding: 10px 20px;
+  margin-top: 20px;
+  background-color: #004c99;  
+  color: white;
+  border: none;
+  border-radius: 6px;
+  
+
+}
+
+#next-button:hover {
+  background-color: #666666;   /* Endnu mørkere grå ved hover */
+}
