@@ -68,27 +68,7 @@ function showEndScreen() {
             }
 
         
-            function score() {
-                let score = 0;
-                let totalQuestions = shuffelQuestions.length;
-            
-                // Beregn scoren
-                if (checkAnswer(shuffelQuestions[currentIndex].correctAnswer)) {
-                    score++;
-                }
-            
-                // Hvis det er det sidste spørgsmål, vis scoren
-                if (currentIndex === totalQuestions - 1) {
-                    const scoreboard = document.getElementById('scoreboard');
-                    const scoreText = document.getElementById('score-text');
-            
-                    // Opdater teksten med scoren
-                    scoreText.textContent = `Du fik ${score} ud af ${totalQuestions} rigtige!`;
-            
-                    // Vis score-sektionen
-                    scoreboard.style.display = 'block';
-                }
-            }
+       
  function WrongAnswers() {
     if (!checkAnswer(shuffelQuestions[currentIndex].correctAnswer)) {
         wrongAnswers.push(shuffelQuestions[currentIndex].ID);
