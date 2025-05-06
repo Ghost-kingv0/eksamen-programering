@@ -9,8 +9,6 @@ let wrongAnswers = [];
 
 
 function showImage() {
-    console.log(shuffelQuestions); // Debugging: Tjek, om data er korrekt
-    console.log(currentIndex); // Debugging: Tjek, om currentIndex er korrekt
 
     const quizimage = document.getElementById('Question');
     if (!quizimage) {
@@ -69,16 +67,8 @@ function showEndScreen() {
 
         
        
- function WrongAnswers() {
-    if (!checkAnswer(shuffelQuestions[currentIndex].correctAnswer)) {
-        wrongAnswers.push(shuffelQuestions[currentIndex].ID);
-    }
-}
+
 function handleAnswer(answerIndex) {
-    if (answerIndex === undefined || answerIndex === null) {
-        alert('Vælg et svar, før du går videre!');
-        return; // Stop funktionen, hvis der ikke er valgt et svar
-    }
 
     if (checkAnswer(answerIndex)) {
         alert('Korrekt svar!');
@@ -91,13 +81,7 @@ function handleAnswer(answerIndex) {
 
 window.handleAnswer = handleAnswer;
 // Funktion til at rydde farverne og aktivere knapperne til næste spørgsmål
-function clearAnswerButtons() {
-    const btns = document.querySelectorAll('.answer-btn');
-    btns.forEach(btn => {
-        btn.classList.remove('correct', 'incorrect');
-        btn.disabled = false;
-    });
-}
+
 
 export function showAllSolutions() {
     console.log('Viser løsninger...');
