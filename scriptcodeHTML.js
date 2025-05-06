@@ -54,7 +54,7 @@ function showEndScreen() {
     // Vis resultatet som en alert
     alert(`Quizzen er færdig! Du fik ${correctAnswersCount} rigtige ud af ${totalQuestions} spørgsmål.`);
 }
-            //husk at fixe så den ikke bliver ved med at loope 
+        
  
             function checkAnswer(answer) {
                 if (!shuffelQuestions[currentIndex]) {
