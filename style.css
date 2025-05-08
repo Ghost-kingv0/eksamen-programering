@@ -1,75 +1,99 @@
 /* Grundopsætning for hele siden */
 body {
-  font-family: Arial, sans-serif; /* Gør teksten letlæselig */
-  margin: 0;                      /* Fjerner standardafstand rundt om siden */
-  padding: 0;                     /* Fjerner indvendig afstand */
-  background-color: #f0f8ff;      /* Lys blå baggrund */
+  font-family: Arial, sans-serif; 
+  margin: 0;                      
+  padding: 0;                     
+  background-color: #f0f8ff;     
 }
 
 /* Øverste bjælke med faner */
 .tabs {
-  display: flex;          /* Lægger fanerne ved siden af hinanden */
-  background: #0077cc;    /* Mørkeblå baggrund */
-  padding: 10px;          /* Luft inde i bjælken */
+  display: flex;          
+  background: #0077cc;    
+  padding: 10px;          
 }
 
 /* Udseende for hver fane */
 .tab {
-  padding: 10px 20px;     /* Luft inde i fanen */
-  margin-right: 10px;     /* Afstand mellem fanerne */
-  background: #66aaff;    /* Lysere blå */
-  border-radius: 5px;     /* Runde hjørner */
-  color: white;           /* Hvid tekst */
-  cursor: pointer;        /* Gør musen til hånd ved hover */
+  padding: 10px 20px;     
+  margin-right: 10px;     
+  background: #66aaff;    
+  border-radius: 5px;     
+  color: white;           
+  cursor: pointer;        
 }
 
 /* Når musen holdes over en fane */
 .tab:hover {
-  background: #5599dd;    /* Mørkere blå ved hover */
+  background: #5599dd;   
 }
 
 /* Den aktive fane */
 .tab.active {
-  background: #004c99;    /* Mørk blå fane når den er valgt */
+  background: #004c99;    
 }
 
 /* Indholdet under fanerne */
 .content {
-  display: none;          /* Skjules som udgangspunkt */
-  padding: 20px;          /* Luft rundt om indholdet */
-  background: white;      /* Hvid baggrund */
-  border-top: none;       /* Ingen kant øverst */
+  display: none;          
+  padding: 20px;          
+  background: white;      
+  border-top: none;       
 }
 
 /* Den aktive fanes indhold vises */
 .content.active {
-  display: block;         /* Vises når aktiv */
+  display: block;         
 }
 
 /* Overskrifterne */
 .visuel-heading {
-  font-size: 2.5em;       /* Stor tekst */
-  font-weight: bold;      /* Fed skrift */
-  color: #333;            /* Mørkegrå */
-  margin-bottom: 10px;    /* Luft under overskriften */
-  text-align: center;     /* Centreret tekst */
+  font-size: 2.5em;       
+  font-weight: bold;      
+  color: #333;            
+  margin-bottom: 10px;    
+  text-align: center;     
 }
 
 /* Underoverskrifterne */
 .visuel-subheading{
-  font-size: 1.2em;       /* Lidt større tekst end normalt */
-  color: #666;            /* Grå farve */
-  margin-bottom: 20px;    /* Luft under underteksten */
-  text-align: center;     /* Centreret tekst */
+  font-size: 1.2em;      
+  color: #666;            
+  margin-bottom: 20px;    
+  text-align: center;     
 }
+/* den del der eksamenstips */
+.tekstblok {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+  line-height: 1.6;
+}
+
+.tekstblok h3 {
+  margin-top: 1.5rem;
+  color: #444;
+  font-size: 1.3em;
+  text-align: left;
+}
+
+.tekstblok ul {
+  padding-left: 1.5rem;
+  list-style-type: disc;
+}
+
+.tekstblok li {
+  margin-bottom: 0.5rem;
+}
+/* her til */
 
 /* forsidebilledet */
 .forsidebillede {
-  width: 1000px;           /* Billedets bredde – kan fx også være 60% */
-  height: auto;           /* Holder proportionerne */
-  display: block;         /* Gør at margin 'auto' virker */
-  margin: 20px auto;      /* Centrerer billedet og giver luft over og under */
-  border-radius: 8px;     /* Blødt afrundede hjørner */
+  width: 1000px;           
+  height: auto;           
+  display: block;         
+  margin: 20px auto;      
+  border-radius: 8px;     
 }
 .content h2, .content h3 {
   margin-top: 1.5rem;
@@ -86,7 +110,7 @@ body {
   margin-bottom: 0.5rem;
 }
 
-/* "bruger mig frem til at lave styling til sva""" */
+/* bla. til placering af knapperne */
 #quiz-container {
   max-width: 600px;
   margin: auto;
@@ -99,20 +123,12 @@ body {
 .answers button {
   display: block;
   margin: 10px auto;
-  padding: 10px 20px;
-  font-size: 1em;
-}
-.correct {
-  background-color: green;
-  color: white;
-}
-.incorrect {
-  background-color: red;
-  color: white;
+  padding: 16px 32px;
+  font-size: 1.4em;
 }
 #next-button {
   margin-top: 20px;
-  padding: 10px 20px;
+  padding: 16px 32px;
   font-size: 1em;
 }
 #scoreboard {
